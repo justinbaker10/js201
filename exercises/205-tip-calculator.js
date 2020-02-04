@@ -9,7 +9,14 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
-
+function tipAmount (billAmt, serviceLvl) {
+const serviceObj = {
+good: .2,
+fair: .15,
+poor: .1
+}
+return billAmt * serviceObj[serviceLvl]
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,7 +27,14 @@
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
-
+function totalAmount (billAmt, serviceLvl) {
+    const serviceObj = {
+        good: .2,
+        fair: .15,
+        poor: .1
+        }
+        return (billAmt * serviceObj[serviceLvl]) + billAmt
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,3 +45,14 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+// Write a function "splitAmount" that takes a bill amount, the level of service,
+// and the number of people to split the bill between. It should return the final
+// amount for each person.
+function splitAmount (billAmt, serviceLvl, noOfGuests) {
+    const serviceObj = {
+        good: .2,
+        fair: .15,
+        poor: .1
+        }
+        return (((billAmt * serviceObj[serviceLvl]) + billAmt) / noOfGuests)
+}
