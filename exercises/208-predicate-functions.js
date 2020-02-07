@@ -20,7 +20,28 @@
 // isVowel('A') --> true
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
+function isVowel (x) {
+    // version 1
+    // if (x === 'A' || x === 'E' || x === 'I' || x === 'O' || x === 'U' || x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u') {
+    //     return true
+    // } else {
+    //     return false
+    // }
 
+    // version 2
+    //return (x === 'A' || x === 'E' || x === 'I' || x === 'O' || x === 'U' || x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u')
+
+    // version 3
+    // const isXAString = (typeof x === 'string')
+    // if (!isXAString) { return false }
+    // const lowercaseX = x.toLowerCase()
+    // const vowels = 'aeiou'
+    // const lowercaseXFoundInsideVowels = vowels.indexOf(lowercaseX) !== -1
+    // return lowercaseXFoundInsideVowels
+
+    // version 4
+    return typeof x === 'string' && 'aeiou'.indexOf(x.toLowerCase()) !== -1
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,8 +57,12 @@
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
+function isEven (x) {
+    isEven.isInteger() === true
+    let i = 2
+    
 
-
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
