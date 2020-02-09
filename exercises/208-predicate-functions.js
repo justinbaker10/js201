@@ -57,13 +57,23 @@ function isVowel (x) {
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
-function isEven (x) {
-    isEven.isInteger() === true
-    let i = 2
-    
-
+function isEven (num) {
+if (typeof num === 'number' && num % 2 === 0) {
+return true
+}
+else {
+    return false
+}
 }
 
+function isOdd (num) {
+    if (typeof num === 'number' && num % 1 === 0 && num % 2 !== 0) {
+    return true
+    }
+    else {
+    return false
+    }
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
 // and returns true or false if the city name is the capital of the state.
@@ -73,8 +83,71 @@ function isEven (x) {
 // Hint 2: This problem can be solved without using a "for" or "while" loop.
 // Hint 3: Can you find this data online in JSON format? How might that be helpful?
 //
+
 // Examples:
 // isCapitalCity('Texas', 'Austin') --> true
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+
+// tell me if the fizzlewart property exists on stateCapitalsObj
+function isCapitalCity (stateName, stateCity) {
+const listOfStates = {
+'Alabama' : 'Montgomery',
+'Alaska' : 'Juneau',
+'Arizona' : 'Phoenix',
+'Arkansas' : 'Little Rock',
+'California' : 'Sacramento',
+'Colorado' : 'Denver',
+'Connecticut' : 'Hartford',
+'Delaware' : 'Dover',
+'Florida' : 'Tallahassee',
+'Georgia' : 'Atlanta',
+'Hawaii' : 'Honolulu',
+'Idaho' : 'Boise',
+'Illinois' : 'Springfield',
+'Indiana' : 'Indianapolis',
+'Iowa' : 'Des Moines',
+'Kansas' : 'Topeka',
+'Kentucky' : 'Frankfort',
+'Louisiana' : 'Baton Rouge',
+'Maine' : 'Augusta',
+'Maryland' : 'Annapolis',
+'Massachusetts' : 'Boston',
+'Michigan' : 'Lansing',
+'Minnesota' : 'Saint Paul',
+'Mississippi' : 'Jackson',
+'Missouri' : 'Jefferson City',
+'Montana' : 'Helena',
+'Nebraska' : 'Lincoln',
+'Nevada' : 'Carson City',
+'New Hampshire' : 'Concord',
+'New Jersey' : 'Trenton',
+'New Mexico' : 'Santa Fe',
+'New York' : 'Albany',
+'North Carolina' : 'Raleigh',
+'North Dakota' : 'Bismarck',
+'Ohio' : 'Columbus',
+'Oklahoma' : 'Oklahoma City',
+'Oregon' : 'Salem',
+'Pennsylvania' : 'Harrisburg',
+'Rhode Island' : 'Providence',
+'South Carolina' : 'Columbia',
+'South Dakota' : 'Pierre',
+'Tennessee' : 'Nashville',
+'Texas' : 'Austin',
+'Utah' : 'Salt Lake City',
+'Vermont' : 'Montpelier',
+'Virginia' : 'Richmond',
+'Washington' : 'Olympia',
+'West Virginia' : 'Charleston',
+'Wisconsin' : 'Madison',
+'Wyoming' : 'Cheyenne'
+}
+if (listOfStates[stateName] === stateCity) {
+return true
+} else {
+return false
+}
+}
